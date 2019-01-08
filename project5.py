@@ -16,7 +16,7 @@ query_1 = '''
     SELECT b.title, a.num_views
     FROM
         (SELECT regexp_replace(path,('\\/article\\/'), '') AS top3,
-            count(path) AS num_views
+            COUNT(path) AS num_views
         FROM log
         WHERE path LIKE '\\/article\\/%'
         GROUP BY path
@@ -29,14 +29,14 @@ query_1 = '''
 # Query 1 finds the instances where the begining of the path is "\article\"
 
 query_2 = '''
-    SELECT authors.name,  sum(rawcount.num_views)
+    SELECT authors.name,  SUM(rawcount.num_views)
     FROM
         articles
         JOIN
         authors ON authors.id = articles.author
         JOIN rawcount ON rawcount.title = articles.title
     GROUP BY authors.name
-    ORDER BY sum(rawcount.num_views) DESC;
+    ORDER BY SUM(rawcount.num_views) DESC;
 '''
 
 # Query 2 finds the number of authors by joining all three tables
@@ -134,7 +134,7 @@ for popular_authors in answer_2:
     top_authors = top_authors+1
 
 print ''
-print 'Day(s) with errors greater than 1% of total web hits'
+print 'Day(s) with errors greater than 1 % of total web hits'
 # Prints out the days with errors greater than 1% of total web hits
 # Code 4-- represent errors ( 404 Not Found) and Code 2-- represent
 # Successful page hits ( 200 Ok)
