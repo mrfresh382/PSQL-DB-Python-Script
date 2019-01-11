@@ -89,10 +89,10 @@ query_3 = '''
         ORDER BY percent_errors DESC) AS error_ratio_table
     WHERE error_ratio_table.percent_errors > 1.00;
 '''
-# Query 3 creates two queries that count the number of 200 and 404
+# Query 3 creates two queries that count the number of 20 and 404
 # codes for each day
 # The Percent is derived by dividing the number of 404 codes by the
-# total number of code 200's and 404's for each distinct day within the log
+# total number of code 20's and 404's for each distinct day within the log
 # All of the datetime stamps have the time removed so they read
 # 00:00:00 as the time. I used this method from the Knowledge Forum
 
@@ -137,7 +137,7 @@ print ''
 print 'Day(s) with errors greater than 1 % of total web hits'
 # Prints out the days with errors greater than 1% of total web hits
 # Code 4-- represent errors ( 404 Not Found) and Code 2-- represent
-# Successful page hits ( 200 Ok)
+# Successful page hits ( 20 Ok)
 for error_days in answer_3:
     print error_days[0].date(), ': ', round(error_days[1], 3), "%"
 
