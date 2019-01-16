@@ -1,5 +1,4 @@
 # Project-5---Udacity IPND
-# Submitted by Doug McDonald
 # Used Python 2.7.13, Vagrant 2.2.2, VirtualBox 5.2.2
 # System Specs: Windows 7, 64 bit
 # Used GitBash as the terminal, Windows Powershell 5.1
