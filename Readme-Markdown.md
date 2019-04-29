@@ -20,7 +20,7 @@ I also submitted this project for the Intro to Programming Nanodegree ( BackEnd 
 ```
 psql news
 ```
-  To quit back to Vagrant:
+7b.  To quit back to Vagrant:
 ```
 \q 
 ```
@@ -33,7 +33,7 @@ psql news
 
 ## Design Notes
 1. Query 1 was pretty straightforward
-2. Query 2 included multiple sub-queries and required some text formatting within Python and PSQL.
+2. Query 2 included multiple sub-queries and required some text formatting within Python and PSQL. Articles can be joined to the Log table by striping the "/article/" path name from the Log table entry to make them join-able. This makes the output pretty and do-able. 
 3. Query 3 included sub-queries and a calulation within PSQL. 
 - We are assuming 200 series codes are successful and 400 series produce an error. Throgh analysis of the log file, there were no 300 series or 400 series for the test server. 
 
