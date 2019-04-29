@@ -31,3 +31,10 @@ psql news
 - If the Python file is not accessible when SSHed into Vagrant, than execute the `vagrant reload` and re-attempt steps 5-6 above. If this doesn't work, then reinstall the Vagrant instance and news database on your OS using the documentation provided in the SQL lessons. 
 - Ensure you have a **graceful shutdown** of vagrant instance before you shutdown or restart your OS. Use command `vagrant suspend` to prevent corrupting the news database and vagrant instance. 
 
+## Design Notes
+1. Query 1 was pretty straightforward
+2. Query 2 included multiple sub-queries and required some text formatting within Python and PSQL.
+3. Query 3 included sub-queries and a calulation within PSQL. 
+- We are assuming 200 series codes are successful and 400 series produce an error. Throgh analysis of the log file, there were no 300 series or 400 series for the test server. 
+
+
