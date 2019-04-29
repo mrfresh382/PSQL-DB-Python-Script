@@ -1,1 +1,32 @@
+# Logs Analysis Project
+Submitted by Doug McDonald for Udacity Full Stack Nanodegree.
+I also submitted this project for the Intro to Programming Nanodegree ( BackEnd Specialization) completed in Feburary 2019 with my company AT&T. My Udacity account with AT&T is under email login **dm338t@att.com** and I submitted with GitHub user name _mrfresh382_ . I reused alot of the work, but made a few changes also. 
+## System Specs
+- Python 2.7.13, Vagrant 2.2.2, VirtualBox 5.2.2
+- System Specs: Windows 7, 64 bit
+- Used GitBash as the terminal, Windows Powershell 5.1
+- Used VM provided Ubuntu 16.04, PSQL 9.5.4
+- Code checked with PEP8 'pycodestyle'
+
+## User Guide for Udacity Grader
+1. Use GitBash Shell and cd to the vagrant directory
+2. Open VM- `vagrant up`
+3. SSH into VM- `vagrant ssh`
+4. Once SSHed into VM enter `cd /vagrant`
+5. From this folder you can run the project5.py file. Check to ensure it is accessible by executing `ls` command. If it is not viewable, check that you are in the '/vagrant' folder, then proceed with troubleshooting. 
+6. Execute python file within VM `python project5.py`
+
+7. (Optional) To explore the 'News' database:
+```
+psql news
+```
+  To quit back to Vagrant:
+```
+\q 
+```
+## Notes/Issues 
+- I had to update Virtual Box and Windows Management Framework 5.1 A.k.a. Powershell 5.1.
+- When importing SQL queries into Python file, I had to change \/ to \\/ to make compatible with ASCII encoding and pycodestyle.
+- In Sublime, I had to change the 'Tabs' to 'Spaces', this cleared out the numerous PEP warnings. 
+- If the Python file is not accessible when SSHed into Vagrant, than execute the `vagrant reload` and re-attempt steps 5-6 above. If this doesn't work, then reinstall the Vagrant instance on your OS using the documentation provided in the SQL lessons. 
 
