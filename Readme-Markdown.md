@@ -28,5 +28,6 @@ psql news
 - I had to update Virtual Box and Windows Management Framework 5.1 A.k.a. Powershell 5.1.
 - When importing SQL queries into Python file, I had to change \/ to \\/ to make compatible with ASCII encoding and pycodestyle.
 - In Sublime, I had to change the 'Tabs' to 'Spaces', this cleared out the numerous PEP warnings. 
-- If the Python file is not accessible when SSHed into Vagrant, than execute the `vagrant reload` and re-attempt steps 5-6 above. If this doesn't work, then reinstall the Vagrant instance on your OS using the documentation provided in the SQL lessons. 
+- If the Python file is not accessible when SSHed into Vagrant, than execute the `vagrant reload` and re-attempt steps 5-6 above. If this doesn't work, then reinstall the Vagrant instance and news database on your OS using the documentation provided in the SQL lessons. 
+- Ensure you have a **graceful shutdown** of vagrant instance before you shutdown or restart your OS. Use command `vagrant suspend` to prevent corrupting the news database and vagrant instance. 
 
