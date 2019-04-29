@@ -44,7 +44,7 @@ SELECT DISTINCT date_trunc( 'day', time) AS date_value ,
             FROM log
             ...
 ```
-I had to use `cast(number AS real)` within PSQL to get the selected numbers to perform division in decimal format. Simple division '/' was easy to use. I used post-processing in Python to round the output to 3 decimal points. I tried to round the output in PSQL, but couldn't get it to work. 
+I had to use `cast(number AS real)` and `cast(numer AS numeric)` within PSQL to get the selected numbers to perform division in decimal format. Simple division '/' was easy to use. 
 ```
 round(error_days[1], 3)
 ```
