@@ -41,7 +41,10 @@ SELECT DISTINCT date_trunc( 'day', time) AS date_value ,
             FROM log
             ...
 ```
-I had to use `cast(number AS real)` within PSQL eliminate calculation errors. Simple division '/' was easy to use. 
+I had to use `cast(number AS real)` within PSQL eliminate calculation errors. Simple division '/' was easy to use. I used post-processing in Python to round the output to 3 decimal points. I tried to round the output in PSQL, but couldn't get it to work. 
+```
+round(error_days[1], 3)
+```
 - We are assuming 200 series codes are successful and 400 series produce an error. Throgh analysis of the log file, there were no 300 series or 400 series for the test server. 
 
 
