@@ -20,7 +20,7 @@ I also submitted this project for the Intro to Programming Nanodegree ( BackEnd 
 ```
 psql news
 ```
-7. b.  To quit back to Vagrant:
+7. b.  (Optional)To quit back to Vagrant:
 ```
 \q 
 ```
@@ -48,6 +48,6 @@ I had to use `cast(number AS real)` within PSQL to get the selected numbers to p
 ```
 round(error_days[1], 3)
 ```
-- We are assuming 200 series codes are successful and 400 series produce an error. Throgh analysis of the log file, there were no 300 series or 400 series for the test server. 
+- We are assuming 200 series codes are successful and 400 series produce an error. Throgh analysis of the log file, there were no 300 series or 400 series for the test server, but the python file will search for code 300 as good requests and 500 as bad requests. 
 
 
